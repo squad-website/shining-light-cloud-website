@@ -1,0 +1,11 @@
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #7BC6F2, #8DD4FF);
+}
+
+.hero h1 {
+    font-size: 64px;
+}

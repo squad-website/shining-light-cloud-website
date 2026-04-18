@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth;}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.5s ease, color 0.5s ease;
+    background: linear-gradient(180deg, #7BC6F2 0%, #8DD4FF 15%, #9CDDFE 30%, #AEE7FF 45%, #C3F1FF 60%, #D7F8FF 75%, #E9FCFF 100%);
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    scroll-margin-top: 100px;
+    color: white;
+}
+
+.about, .team, .activity, .join, .social, .ranking, .member-list {
+    background: transparent;
+}
+
+.bttn {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: rgba(255,255,255,0.2);
+}

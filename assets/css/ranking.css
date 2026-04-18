@@ -1,0 +1,173 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* BACKGROUND BODY (Biru Pastel sesuai SS terbaru) */
+body {
+    background-color: #d1e9f6; 
+}
+
+/* NAVBAR (Biru Steel) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #5191c1; /* Warna biru sesuai gambar */
+    color: white;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* TOMBOL KEMBALI (Rounded Bulat) */
+.back-btn {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* CONTENT ALIGNMENT */
+.ranking {
+    text-align: center; /* Judul dan Search jadi di tengah */
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #004080;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* SEARCH BAR (Style sesuai gambar) */
+.search-wrapper {
+    margin-bottom: 30px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #b3d1e6;
+    background: #f0f8ff;
+    outline: none;
+    text-align: center;
+}
+
+/* TABLE STYLING */
+.ranking-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ranking-table {
+    width: 100%;
+    max-width: 850px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* TABLE HEADER */
+.ranking-table thead th {
+    background: #9bc6e2; /* Biru Header sesuai SS */
+    color: #2c5270;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* TABLE CELLS */
+.ranking-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eef6fb;
+    color: #2c5270;
+}
+
+/* TOP 3 COLORS (Solid & Vibrant sesuai SS) */
+.top1 td {
+    background-color: #ffe68d !important; /* Kuning Baris 1 */
+    font-weight: bold;
+}
+
+.top2 td {
+    background-color: #d1e9ff !important; /* Biru Baris 2 */
+    font-weight: bold;
+}
+
+.top3 td {
+    background-color: #ffccaa !important; /* Oranye Baris 3 */
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.ranking-table tbody tr:hover td {
+    background-color: #f5faff;
+}
+
+/* ============================
+   RESPONSIVE: MOBILE SUPPORT
+   ============================ */
+@media (max-width: 600px) {
+
+    /* Navbar lebih kecil */
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .back-btn {
+        padding: 5px 15px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    /* Judul mengecil */
+    h2 {
+        font-size: 22px;
+    }
+
+    /* Search bar full width */
+    .search-wrapper input {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Container tabel bisa geser (anti melebar) */
+    .ranking-container {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    /* Tabel jadi lebih kecil */
+    .ranking-table {
+        width: 600px; /* Biar tidak ngecip di HP */
+    }
+
+    .ranking-table td,
+    .ranking-table th {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+

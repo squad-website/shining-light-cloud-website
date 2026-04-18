@@ -1,0 +1,122 @@
+/* HEADER */
+.rules-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.rules-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.rules-header p {
+    opacity: 0.7;
+}
+
+/* CONTENT */
+.rules-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* GROUP */
+.rules-group {
+    margin-bottom: 40px;
+}
+
+.rules-group h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-left: 4px solid #fff;
+    padding-left: 10px;
+}
+
+/* ITEM */
+.rule-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.rule-item h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.rule-item p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* HOVER */
+.rule-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+.rules-footer {
+    text-align: center;
+    padding: 40px 20px 80px;
+    opacity: 0.7;
+}
+
+/* NAVBAR KHUSUS RULES */
+.rules-navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* TOMBOL KEMBALI */
+.back-btn {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* MOBILE (ANDROID FEEL) */
+@media (max-width: 600px) {
+
+    .rules-header {
+        padding: 15px;
+    }
+
+    .rules-header h1 {
+        font-size: 20px;
+    }
+
+    .rules-header p {
+        font-size: 13px;
+    }
+
+    .rules-content {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .rule-item {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .rule-item h3 {
+        font-size: 14px;
+    }
+
+    .rule-item p {
+        font-size: 12px;
+    }
+
+}
