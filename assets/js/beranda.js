@@ -1,11 +1,13 @@
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
 
-function updateIcon(isDark) {
-    themeToggle.textContent = isDark ? "☀️" : "🌙";
-}
+    if (!themeToggle) return; 
 
-(function initTheme() {
+    function updateIcon(isDark) {
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
+    }
+
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
@@ -14,12 +16,12 @@ function updateIcon(isDark) {
     } else {
         updateIcon(false);
     }
-})();
 
-themeToggle.addEventListener("click", () => {
-    const isDark = body.classList.toggle("dark-mode");
+    themeToggle.addEventListener("click", () => {
+        const isDark = body.classList.toggle("dark-mode");
 
-    updateIcon(isDark);
+        updateIcon(isDark);
 
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
 });
