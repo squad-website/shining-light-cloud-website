@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | SLC</title>
+
+    <link rel="icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/beranda/global.css">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1 class="logo">Shining Light Cloud</h1>
+        <a href="../index.html" class="back-btn">Kembali</a>
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <h1 class="title">Gallery SLC</h1>
+        <p class="subtitle" id="month-label">Dokumentasi bulan ini</p>
+
+        <!-- MONTH MENU AUTO -->
+        <div class="month-menu" id="month-menu"></div>
+
+        <!-- FILTER -->
+        <div class="filter-menu">
+            <button class="active" data-filter="semua">Semua</button>
+            <button data-filter="patroli">Patroli</button>
+            <button data-filter="event">Event</button>
+            <button data-filter="opmem">Open Member</button>
+        </div>
+
+        <!-- GALLERY -->
+        <div class="gallery-grid"></div>
+    </div>
+
+    <script src="../assets/js/gallery.js"></script>
+
+    <!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+</body>
+</html>

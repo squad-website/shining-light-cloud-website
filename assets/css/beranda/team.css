@@ -1,0 +1,22 @@
+.team-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.member {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.25);
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.35);
+}
