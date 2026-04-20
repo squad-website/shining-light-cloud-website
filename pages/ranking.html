@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Member - SLC</title>
+    <link rel="icon" href="../assets/img/favicon.ico">
+
+    <!-- GLOBAL (NAVBAR DI SINI) -->
+    <link rel="stylesheet" href="../assets/css/beranda/global.css">
+
+    <!-- KHUSUS HALAMAN RANKING -->
+    <link rel="stylesheet" href="../assets/css/ranking.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">SLC Member Ranking</div>
+    <a href="../index.html" class="back-btn">Kembali</a>
+</nav>
+
+<!-- CONTENT -->
+<section class="section ranking">
+    <div class="content">
+        <h2>Top Member</h2>
+
+        <div class="search-wrapper">
+            <input type="text" id="search" placeholder="Cari member...">
+        </div>
+
+        <div class="ranking-container">
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Nama</th>
+                        <th>Poin</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <!-- isi dari JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<script src="../assets/js/ranking.js"></script>
+
+</body>
+</html>
