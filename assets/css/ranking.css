@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #d1e9f6; 
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ranking {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #004080;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.search-wrapper {
+    margin-bottom: 30px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #b3d1e6;
+    background: #f0f8ff;
+    outline: none;
+    text-align: center;
+}
+
+.ranking-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ranking-table {
+    width: 100%;
+    max-width: 850px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.ranking-table thead th {
+    background: #9bc6e2;
+    color: #2c5270;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.ranking-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eef6fb;
+    color: #2c5270;
+}
+
+.top1 td {
+    background-color: #ffe68d !important;
+    font-weight: bold;
+}
+
+.top2 td {
+    background-color: #d1e9ff !important;
+    font-weight: bold;
+}
+
+.top3 td {
+    background-color: #ffccaa !important;
+    font-weight: bold;
+}
+
+.ranking-table tbody tr:hover td {
+    background-color: #f5faff;
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .back-btn {
+        padding: 5px 15px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .search-wrapper input {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .ranking-container {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .ranking-table {
+        width: 600px;
+    }
+
+    .ranking-table td,
+    .ranking-table th {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+

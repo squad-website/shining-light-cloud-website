@@ -1,0 +1,27 @@
+.social { color: #033A57; }
+
+.social h2 { color: #02283d; }
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-box {
+    text-decoration: none;
+    color: #033A57;
+    background: rgba(255,255,255,0.45);
+    border: 1px solid #033A57;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-box:hover {
+    background: rgba(255,255,255,0.65);
+    transform: translateY(-5px);
+}
