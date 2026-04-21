@@ -19,10 +19,6 @@ body.dark-mode {
     background: linear-gradient(to right, #0F243A, #1A3654);
 }
 
-.dark-mode .hero {
-
-}
-
 .dark-mode .social-box {
     color: white;
     border-color: white;
