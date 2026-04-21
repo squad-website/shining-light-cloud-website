@@ -30,11 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 desc: "Patroli dan Foto Bersama",
                 category: "patroli",
             },
+            
             {
                 img: "../assets/img/april/19.png",
                 title: "Hari 19",
                 desc: "Patroli dan Foto Bersama",
                 category: "patroli",
+            },
+            
+            {
+                img: "../assets/img/april/20.png",
+                title: "Hari 20",
+                desc: "OpMem dan Foto Bersama",
+                category: "opmem",
             }
         ],
         mei: [],
