@@ -1,6 +1,4 @@
-
 let members = [
-    let members = [
     { name: "Naiun", point: 5730 },
     { name: "Gian", point: 4050 },
     { name: "Lyyna", point: 3680 },
@@ -26,44 +24,6 @@ let members = [
     { name: "Viola", point: 400 },
     { name: "Draco", point: 390 },
     { name: "Violet", point: 590 }
-];
-
-members.sort((a, b) => b.point - a.point);
-
-
-function renderTable(list) {
-    const tbody = document.getElementById("ranking-body");
-    tbody.innerHTML = "";
-
-    list.forEach((member, index) => {
-        let tr = document.createElement("tr");
-
-        if (index === 0) tr.classList.add("top1");
-        if (index === 1) tr.classList.add("top2");
-        if (index === 2) tr.classList.add("top3");
-
-        tr.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${member.name}</td>
-            <td>${member.point}</td>
-        `;
-
-        tbody.appendChild(tr);
-    });
-}
-
-renderTable(members);
-
-
-document.getElementById("search").addEventListener("keyup", function () {
-    let keyword = this.value.toLowerCase();
-
-    let filtered = members.filter(member =>
-        member.name.toLowerCase().includes(keyword)
-    );
-
-    renderTable(filtered);
-});
 ];
 
 members.sort((a, b) => b.point - a.point);
