@@ -48,6 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 title: "Hari 21",
                 desc: "Opmem dan Foto Bersama",
                 category: "opmem",
+            },
+
+            {
+                img: "../assets/img/april/22.png",
+                title: "Hari 22",
+                desc: "Training dan Foto Bersama",
+                category: "training",
             }
         ],
         mei: [],
