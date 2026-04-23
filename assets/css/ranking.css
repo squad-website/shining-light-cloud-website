@@ -76,7 +76,7 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* ================= SUB TITLE (Member / Admin) ================= */
+/* ================= SUB TITLE ================= */
 .sub-title {
     margin: 25px 0 12px 0;
     font-size: 20px;
@@ -109,9 +109,10 @@ h2 {
 /* ================= TABLE ================= */
 .ranking-container {
     display: flex;
-    flex-direction: column; /* ⬅️ ini kuncinya */
+    flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    width: 100%;
 }
 
 .ranking-table {
@@ -124,7 +125,7 @@ h2 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* Admin Table warna header beda sedikit */
+/* Admin Table */
 .admin-table thead th {
     background: #b5d4e9 !important;
 }
@@ -154,46 +155,37 @@ h2 {
 }
 
 /* ================= TIER COLORS ================= */
-
-/* 🔴 S+ */
 .tier-splus {
     background: linear-gradient(90deg, #ff4d4d, #ff9999) !important;
     color: white;
     font-weight: bold;
 }
 
-/* 🟡 S */
 .tier-s {
     background: linear-gradient(90deg, #ffd54f, #fff3a0) !important;
     font-weight: bold;
 }
 
-/* 🟣 A+ */
 .tier-aplus {
     background: linear-gradient(90deg, #b388ff, #e0ccff) !important;
 }
 
-/* 🔵 A */
 .tier-a {
     background: linear-gradient(90deg, #64b5f6, #bbdefb) !important;
 }
 
-/* 🟠 B+ */
 .tier-bplus {
     background: linear-gradient(90deg, #ffcc80, #ffe0b3) !important;
 }
 
-/* 🔹 B */
 .tier-b {
     background: linear-gradient(90deg, #d0d9ff, #eef2ff) !important;
 }
 
-/* ⚪ C */
 .tier-c {
     background: linear-gradient(90deg, #f5f5f5, #ffffff) !important;
 }
 
-/* ⚫ D */
 .tier-d {
     background: linear-gradient(90deg, #e0e0e0, #f5f5f5) !important;
     color: #777;
@@ -236,11 +228,9 @@ h2 {
     margin: 0;
 }
 
-/* Supaya search tidak terlalu melebar */
 .title-row .search-wrapper input {
     width: 220px;
 }
-
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 600px) {
@@ -262,17 +252,33 @@ h2 {
         font-size: 22px;
     }
 
+    /* Title + Search Stack */
+    .title-row {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .title-row .search-wrapper input {
+        width: 100%;
+        max-width: 320px;
+        font-size: 14px;
+    }
+
     .search-wrapper input {
         max-width: 100%;
         font-size: 14px;
     }
 
+    /* TABLE ADAPTIVE */
     .ranking-container {
         overflow-x: auto;
+        padding-bottom: 10px;
     }
 
+    /* Tabel tidak mengecil ke ukuran teks */
     .ranking-table {
-        width: 600px;
+        width: 700px; /* bikin scroll horizontal halus */
     }
 
     .ranking-table td,
@@ -280,15 +286,4 @@ h2 {
         font-size: 14px;
         padding: 10px;
     }
-    .title-row {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .title-row .search-wrapper input {
-        width: 100%;
-        max-width: 300px;
-    }
-
 }
-    
