@@ -1,12 +1,13 @@
+// ================= DATA =================
+
+// MEMBER ONLY
 let members = [
-    // S+ Tier
     { name: "Naiun", point: 5910 },
     { name: "Gian", point: 4050 },
     { name: "Lyyna", point: 3680 },
     { name: "Varlendes", point: 3720 },
     { name: "Ama", point: 2890 },
 
-    // S Tier
     { name: "Melody", point: 2470 },
     { name: "Athaya", point: 2250 },
     { name: "Val", point: 2120 },
@@ -16,12 +17,10 @@ let members = [
     { name: "Alana", point: 1490 },
     { name: "Temi", point: 1350 },
 
-    // A+ Tier
     { name: "Sho", point: 1090 },
     { name: "Ryu", point: 990 },
     { name: "Rick", point: 940 },
 
-    // A Tier
     { name: "Yippi", point: 690 },
     { name: "Violet", point: 770 },
     { name: "Gisel", point: 590 },
@@ -31,13 +30,11 @@ let members = [
     { name: "Visyel", point: 415 },
     { name: "Viola", point: 400 },
 
-    // B+ Tier
     { name: "Draco", point: 390 },
     { name: "Estella", point: 370 },
     { name: "Lalla", point: 340 },
     { name: "Liya", point: 370 },
 
-    // B Tier
     { name: "Aisyah", point: 240 },
     { name: "Kanaya", point: 240 },
     { name: "Herlin", point: 240 },
@@ -48,7 +45,6 @@ let members = [
     { name: "Laura", point: 140 },
     { name: "Win", point: 140 },
 
-    // C Tier
     { name: "Xander", point: 90 },
     { name: "Valrick", point: 90 },
     { name: "Yera", point: 90 },
@@ -87,7 +83,6 @@ let members = [
     { name: "Ath", point: 50 },
     { name: "Mon", point: 50 },
 
-    // D Tier
     { name: "Faras", point: 40 },
     { name: "Zacky", point: 40 },
     { name: "Nevvoir", point: 40 },
@@ -119,9 +114,11 @@ let members = [
     { name: "Alyn", point: 40 },
     { name: "Erer", point: 40 },
     { name: "Chan", point: 40 },
-    { name: "Ayrin", point: 40 },
+    { name: "Ayrin", point: 40 }
+];
 
-    // Admin (bonus)
+// ADMIN ONLY
+let admins = [
     { name: "Rena", point: 8410 },
     { name: "Kenzo", point: 5970 },
     { name: "Marven", point: 5250 },
@@ -129,15 +126,15 @@ let members = [
     { name: "Canny", point: 2760 }
 ];
 
-// FORMAT POINT
+
+// ================= FUNCTION =================
+
 function formatPoint(point) {
-    if (point >= 1000) {
-        return (point / 1000).toFixed(2) + " mp";
-    }
-    return point + " p";
+    return point >= 1000
+        ? (point / 1000).toFixed(2) + " mp"
+        : point + " p";
 }
 
-// TIER
 function getTier(point) {
     if (point >= 2500) return "S+";
     if (point >= 1300) return "S";
@@ -149,7 +146,6 @@ function getTier(point) {
     return "D";
 }
 
-// CSS CLASS
 function getTierClass(tier) {
     return {
         "S+": "tier-splus",
@@ -163,50 +159,77 @@ function getTierClass(tier) {
     }[tier];
 }
 
-// Tambah tier ke member
+
+// ================= MEMBER PROCESS =================
 members = members.map(m => ({
     ...m,
     tier: getTier(m.point)
 }));
 
-// Sort descending
 members.sort((a, b) => b.point - a.point);
 
-// RENDER TABLE
-function renderTable(list) {
+
+// ================= RENDER MEMBER =================
+function renderMembers(list) {
     const tbody = document.getElementById("rankingBody");
     tbody.innerHTML = "";
 
-    list.forEach((member, index) => {
+    list.forEach((m, i) => {
         const tr = document.createElement("tr");
 
-        tr.classList.add(getTierClass(member.tier));
+        tr.classList.add(getTierClass(m.tier));
 
-        let rankDisplay = index + 1;
-        if (index === 0) rankDisplay = "🥇";
-        else if (index === 1) rankDisplay = "🥈";
-        else if (index === 2) rankDisplay = "🥉";
+        let rank = i + 1;
+        if (i === 0) rank = "🥇";
+        else if (i === 1) rank = "🥈";
+        else if (i === 2) rank = "🥉";
 
         tr.innerHTML = `
-            <td>${rankDisplay}</td>
-            <td>${member.name}</td>
-            <td>${formatPoint(member.point)}</td>
-            <td>${member.tier}</td>
+            <td>${rank}</td>
+            <td>${m.name}</td>
+            <td>${formatPoint(m.point)}</td>
+            <td>${m.tier}</td>
         `;
 
         tbody.appendChild(tr);
     });
 }
 
-renderTable(members);
 
-// SEARCH
+// ================= RENDER ADMIN =================
+function renderAdmins() {
+    const tbody = document.getElementById("adminBody");
+    if (!tbody) return;
+
+    tbody.innerHTML = "";
+
+    admins.sort((a, b) => b.point - a.point);
+
+    admins.forEach(a => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+            <td>👑 ${a.name}</td>
+            <td>${formatPoint(a.point)}</td>
+        `;
+
+        tbody.appendChild(tr);
+    });
+}
+
+
+// ================= INIT =================
+renderMembers(members);
+renderAdmins();
+
+
+// ================= SEARCH =================
 document.getElementById("searchInput").addEventListener("input", function () {
     const keyword = this.value.toLowerCase();
 
-    const filtered = members.filter(member =>
-        member.name.toLowerCase().includes(keyword)
+    const filtered = members.filter(m =>
+        m.name.toLowerCase().includes(keyword)
     );
 
-    renderTable(filtered);
+    renderMembers(filtered);
 });
