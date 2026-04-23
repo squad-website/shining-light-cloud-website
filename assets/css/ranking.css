@@ -40,11 +40,9 @@ body {
     text-decoration: none;
     color: white;
     border: 2px solid rgba(255,255,255,0.85);
-
     padding: 7px 18px;
     border-radius: 12px;
     font-weight: bold;
-
     transition: 0.25s;
 }
 
@@ -52,22 +50,10 @@ body {
     background: rgba(255,255,255,0.18);
 }
 
-/* ================= SECTION WRAPPER ================= */
+/* ================= WRAPPER ================= */
 .ranking {
     text-align: center;
     padding: 50px 20px;
-}
-
-/* Update Info */
-.update-info {
-    background: #ffffffaa;
-    padding: 12px 16px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    max-width: 850px;
-    margin: 0 auto 30px auto;
-    color: #004080;
-    font-size: 14px;
 }
 
 h2 {
@@ -76,145 +62,14 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* ================= SUB TITLE ================= */
 .sub-title {
-    margin: 25px 0 12px 0;
-    font-size: 20px;
+    margin-bottom: 12px;
     color: #003666;
     font-weight: bold;
+    font-size: 20px;
 }
 
-/* ================= SEARCH ================= */
-.search-wrapper {
-    margin-bottom: 35px;
-}
-
-.search-wrapper input {
-    width: 100%;
-    max-width: 360px;
-    padding: 12px 18px;
-    border-radius: 25px;
-    border: none;
-    background: #ffffff;
-    outline: none;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.search-wrapper input:focus {
-    transform: scale(1.03);
-}
-
-/* ================= TABLE ================= */
-.ranking-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-    width: 100%;
-}
-
-.ranking-table {
-    width: 100%;
-    max-width: 850px;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* Admin Table */
-.admin-table thead th {
-    background: #b5d4e9 !important;
-}
-
-/* HEADER */
-.ranking-table thead th {
-    background: #9bc6e2;
-    color: #2c5270;
-    padding: 16px;
-    font-weight: bold;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-/* ROW */
-.ranking-table td {
-    padding: 14px;
-    color: #2c5270;
-    border-bottom: 1px solid #eef6fb;
-}
-
-/* HOVER */
-.ranking-table tbody tr:hover {
-    filter: brightness(1.05);
-    transform: scale(1.002);
-}
-
-/* ================= TIER COLORS ================= */
-.tier-splus {
-    background: linear-gradient(90deg, #ff4d4d, #ff9999) !important;
-    color: white;
-    font-weight: bold;
-}
-
-.tier-s {
-    background: linear-gradient(90deg, #ffd54f, #fff3a0) !important;
-    font-weight: bold;
-}
-
-.tier-aplus {
-    background: linear-gradient(90deg, #b388ff, #e0ccff) !important;
-}
-
-.tier-a {
-    background: linear-gradient(90deg, #64b5f6, #bbdefb) !important;
-}
-
-.tier-bplus {
-    background: linear-gradient(90deg, #ffcc80, #ffe0b3) !important;
-}
-
-.tier-b {
-    background: linear-gradient(90deg, #d0d9ff, #eef2ff) !important;
-}
-
-.tier-c {
-    background: linear-gradient(90deg, #f5f5f5, #ffffff) !important;
-}
-
-.tier-d {
-    background: linear-gradient(90deg, #e0e0e0, #f5f5f5) !important;
-    color: #777;
-}
-
-/* ================= TIER INFO ================= */
-.tier-info {
-    margin-top: 40px;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    text-align: left;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tier-info h3 {
-    margin-bottom: 10px;
-    color: #004080;
-}
-
-.tier-info p {
-    margin: 4px 0;
-    font-size: 14px;
-}
-
-/* ===== TITLE + SEARCH (1 BARIS) ===== */
+/* ================= TITLE + SEARCH ================= */
 .title-row {
     display: flex;
     justify-content: space-between;
@@ -228,62 +83,124 @@ h2 {
     margin: 0;
 }
 
-.title-row .search-wrapper input {
+.search-wrapper input {
     width: 220px;
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-/* ================= RESPONSIVE ================= */
+.search-wrapper input:focus {
+    transform: scale(1.03);
+}
+
+/* ================= TABLE ================= */
+.ranking-container {
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+}
+
+.ranking-table {
+    width: 100%;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.ranking-table th {
+    background: #9bc6e2;
+    color: #2c5270;
+    padding: 16px;
+    font-weight: bold;
+}
+
+.admin-table th {
+    background: #b5d4e9 !important;
+}
+
+.ranking-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eef6fb;
+    color: #2c5270;
+}
+
+/* ================= TIER COLORS ================= */
+.tier-splus { background: linear-gradient(90deg, #ff4d4d, #ff9999) !important; color: white; font-weight: bold; }
+.tier-s     { background: linear-gradient(90deg, #ffd54f, #fff3a0) !important; font-weight: bold; }
+.tier-aplus { background: linear-gradient(90deg, #b388ff, #e0ccff) !important; }
+.tier-a     { background: linear-gradient(90deg, #64b5f6, #bbdefb) !important; }
+.tier-bplus { background: linear-gradient(90deg, #ffcc80, #ffe0b3) !important; }
+.tier-b     { background: linear-gradient(90deg, #d0d9ff, #eef2ff) !important; }
+.tier-c     { background: linear-gradient(90deg, #f5f5f5, #ffffff) !important; }
+.tier-d     { background: linear-gradient(90deg, #e0e0e0, #f5f5f5) !important; color: #777; }
+
+/* ================= TIER INFO ================= */
+.tier-info {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ================= RESPONSIVE (NO SCROLL) ================= */
 @media (max-width: 600px) {
 
-    .navbar {
-        padding: 14px 20px;
-    }
-
-    .logo {
-        font-size: 16px;
-    }
-
-    .back-btn {
-        padding: 6px 14px;
-        font-size: 14px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    /* Title + Search Stack */
     .title-row {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
 
-    .title-row .search-wrapper input {
+    .search-wrapper input {
         width: 100%;
         max-width: 320px;
-        font-size: 14px;
     }
 
-    .search-wrapper input {
-        max-width: 100%;
-        font-size: 14px;
-    }
-
-    /* TABLE ADAPTIVE */
-    .ranking-container {
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-
-    /* Tabel tidak mengecil ke ukuran teks */
-    .ranking-table {
-        width: 700px; /* bikin scroll horizontal halus */
-    }
-
+    /* TABLE → CARD */
+    .ranking-table,
+    .ranking-table thead,
+    .ranking-table tbody,
+    .ranking-table th,
     .ranking-table td,
-    .ranking-table th {
+    .ranking-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .ranking-table thead {
+        display: none;
+    }
+
+    .ranking-table tr {
+        margin-bottom: 15px;
+        background: white;
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .ranking-table td {
+        padding: 8px 10px;
+        border: none;
+        text-align: left;
         font-size: 14px;
-        padding: 10px;
+    }
+
+    .ranking-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 4px;
     }
 }
