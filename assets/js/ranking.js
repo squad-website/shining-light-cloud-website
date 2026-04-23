@@ -74,47 +74,14 @@ let members = [
     { name: "Juju", point: 90 },
     { name: "Ali", point: 90 },
     { name: "Rizky", point: 90 },
+
     { name: "Ebel", point: 50 },
     { name: "Elclio", point: 50 },
     { name: "Mira", point: 50 },
-    { name: "Ajeng", point: 50 },
-    { name: "Fisa", point: 50 },
-    { name: "Inan", point: 50 },
-    { name: "Ath", point: 50 },
-    { name: "Mon", point: 50 },
 
     { name: "Faras", point: 40 },
     { name: "Zacky", point: 40 },
-    { name: "Nevvoir", point: 40 },
-    { name: "Syasya", point: 40 },
-    { name: "Zen", point: 40 },
-    { name: "Anya", point: 40 },
-    { name: "Sya", point: 40 },
-    { name: "Nihan", point: 40 },
-    { name: "Dev", point: 40 },
-    { name: "Pai", point: 40 },
-    { name: "Arfa", point: 40 },
-    { name: "Ica", point: 40 },
-    { name: "Selyn", point: 40 },
-    { name: "Kiara", point: 40 },
-    { name: "Yumna", point: 40 },
-    { name: "Nda", point: 40 },
-    { name: "Anindya", point: 40 },
-    { name: "Luis", point: 40 },
-    { name: "Latasya", point: 40 },
-    { name: "Airyn", point: 40 },
-    { name: "Ara", point: 40 },
-    { name: "Feby", point: 40 },
-    { name: "Yevgeny", point: 40 },
-    { name: "Esta", point: 40 },
-    { name: "Naya", point: 40 },
-    { name: "Pia", point: 40 },
-    { name: "Sauno", point: 40 },
-    { name: "Sza", point: 40 },
-    { name: "Alyn", point: 40 },
-    { name: "Erer", point: 40 },
-    { name: "Chan", point: 40 },
-    { name: "Ayrin", point: 40 }
+    { name: "Zen", point: 40 }
 ];
 
 // ADMIN ONLY
@@ -127,7 +94,7 @@ let admins = [
 ];
 
 
-// ================= FUNCTION =================
+// ================= UTIL =================
 
 function formatPoint(point) {
     return point >= 1000
@@ -160,13 +127,23 @@ function getTierClass(tier) {
 }
 
 
-// ================= MEMBER PROCESS =================
-members = members.map(m => ({
-    ...m,
-    tier: getTier(m.point)
-}));
+// ================= PREPARE DATA =================
+members = members
+    .map(m => ({ ...m, tier: getTier(m.point) }))
+    .sort((a, b) => b.point - a.point);
 
-members.sort((a, b) => b.point - a.point);
+admins = admins
+    .map(a => ({ ...a, tier: getTier(a.point) }))
+    .sort((a, b) => b.point - a.point);
+
+
+// ================= CREATE CELL =================
+function createCell(text, label) {
+    const td = document.createElement("td");
+    td.textContent = text;
+    td.setAttribute("data-label", label); // 🔥 penting untuk mobile
+    return td;
+}
 
 
 // ================= RENDER MEMBER =================
@@ -176,7 +153,6 @@ function renderMembers(list) {
 
     list.forEach((m, i) => {
         const tr = document.createElement("tr");
-
         tr.classList.add(getTierClass(m.tier));
 
         let rank = i + 1;
@@ -184,12 +160,10 @@ function renderMembers(list) {
         else if (i === 1) rank = "🥈";
         else if (i === 2) rank = "🥉";
 
-        tr.innerHTML = `
-            <td>${rank}</td>
-            <td>${m.name}</td>
-            <td>${formatPoint(m.point)}</td>
-            <td>${m.tier}</td>
-        `;
+        tr.appendChild(createCell(rank, "Rank"));
+        tr.appendChild(createCell(m.name, "Nama"));
+        tr.appendChild(createCell(formatPoint(m.point), "Poin"));
+        tr.appendChild(createCell(m.tier, "Tier"));
 
         tbody.appendChild(tr);
     });
@@ -203,15 +177,12 @@ function renderAdmins() {
 
     tbody.innerHTML = "";
 
-    admins.sort((a, b) => b.point - a.point);
-
     admins.forEach(a => {
         const tr = document.createElement("tr");
 
-        tr.innerHTML = `
-            <td>👑 ${a.name}</td>
-            <td>${formatPoint(a.point)}</td>
-        `;
+        tr.appendChild(createCell("👑 " + a.name, "Nama"));
+        tr.appendChild(createCell(formatPoint(a.point), "Poin"));
+        tr.appendChild(createCell(a.tier, "Tier"));
 
         tbody.appendChild(tr);
     });
