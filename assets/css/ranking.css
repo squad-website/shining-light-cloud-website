@@ -99,7 +99,7 @@ h2 {
     transform: scale(1.03);
 }
 
-/* ================= TABLE ================= */
+/* ================= TABLE (DESKTOP NORMAL) ================= */
 .ranking-container {
     max-width: 850px;
     margin: 0 auto 40px auto;
@@ -107,7 +107,7 @@ h2 {
 
 .ranking-table {
     width: 100%;
-    background: white;
+    background: white; /* desktop tetap putih */
     border-radius: 18px;
     overflow: hidden;
     border-collapse: collapse;
@@ -152,9 +152,10 @@ h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* ================= RESPONSIVE (NO SCROLL) ================= */
+/* ================= RESPONSIVE (ANDROID ONLY STYLE) ================= */
 @media (max-width: 600px) {
 
+    /* Title */
     .title-row {
         flex-direction: column;
         gap: 15px;
@@ -181,26 +182,45 @@ h2 {
         display: none;
     }
 
-    .ranking-table tr {
-        margin-bottom: 15px;
-        background: white;
-        border-radius: 12px;
-        padding: 12px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    /* TABLE BACKGROUND IKUT BODY */
+    .ranking-table {
+        background: transparent;
+        box-shadow: none;
     }
 
+    /* CARD STYLE */
+    .ranking-table tr {
+        margin-bottom: 15px;
+        background: rgba(255,255,255,0.75);
+        backdrop-filter: blur(4px);
+
+        border-radius: 12px;
+        padding: 12px;
+
+        border: 1px solid rgba(0, 64, 128, 0.2); /* 🔥 garis luar */
+    }
+
+    /* ISI */
     .ranking-table td {
         padding: 8px 10px;
         border: none;
         text-align: left;
         font-size: 14px;
+
+        border-bottom: 1px solid rgba(0, 64, 128, 0.15); /* 🔥 garis dalam */
     }
 
+    .ranking-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* LABEL */
     .ranking-table td::before {
         content: attr(data-label);
         display: block;
         font-weight: bold;
         color: #004080;
         margin-bottom: 4px;
+        font-size: 13px;
     }
 }
