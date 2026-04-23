@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking | SLC</title>
+    <link rel="stylesheet" href="../assets/css/ranking.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Member Ranking</div>
+
+    <a href="../index.html" class="back-btn">Kembali</a>
+</nav>
+
+<section class="ranking">
+
+    <h2>Leaderboard Member</h2>
+
+    <!-- SEARCH BAR -->
+    <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Cari nama member...">
+    </div>
+
+    <!-- TABLE -->
+    <div class="ranking-container">
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Nama</th>
+                    <th>Poin</th>
+                    <th>Tier</th>
+                </tr>
+            </thead>
+            <tbody id="rankingBody">
+                <!-- Diisi otomatis oleh JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- TIER REQUIREMENTS -->
+    <div class="tier-info">
+        <h3>Tier Requirement</h3>
+        <p><strong>S+ Tier</strong> — ≥ 2.50mp, sangat aktif, selalu terlihat.</p>
+        <p><strong>S Tier</strong> — 1.30mp – 2.49mp, aktif kegiatan utama.</p>
+        <p><strong>A+ Tier</strong> — 800p – 1.29mp, cukup aktif & konsisten.</p>
+        <p><strong>A Tier</strong> — 400p – 799p, lumayan aktif.</p>
+        <p><strong>B+ Tier</strong> — 250p – 399p, aktivitas sedang.</p>
+        <p><strong>B Tier</strong> — 120p – 249p, kurang aktif.</p>
+        <p><strong>C Tier</strong> — 50p – 119p, minim kontribusi.</p>
+        <p><strong>D Tier</strong> — < 50p, tidak aktif.</p>
+    </div>
+
+</section>
+
+<script src="../assets/js/ranking.js"></script>
+</body>
+</html>

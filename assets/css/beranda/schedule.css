@@ -1,0 +1,26 @@
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.22);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    color: #033A57;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.schedule-table th {
+    padding: 12px;
+    background: rgba(255,255,255,0.33);
+}
+
+.schedule-table td {
+    padding: 12px;
+}
