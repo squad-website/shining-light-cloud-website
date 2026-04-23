@@ -52,16 +52,36 @@ body {
     background: rgba(255,255,255,0.18);
 }
 
-/* ================= TITLE ================= */
+/* ================= SECTION WRAPPER ================= */
 .ranking {
     text-align: center;
     padding: 50px 20px;
+}
+
+/* Update Info */
+.update-info {
+    background: #ffffffaa;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-width: 850px;
+    margin: 0 auto 30px auto;
+    color: #004080;
+    font-size: 14px;
 }
 
 h2 {
     color: #004080;
     font-size: 28px;
     margin-bottom: 25px;
+}
+
+/* ================= SUB TITLE (Member / Admin) ================= */
+.sub-title {
+    margin: 25px 0 12px 0;
+    font-size: 20px;
+    color: #003666;
+    font-weight: bold;
 }
 
 /* ================= SEARCH ================= */
@@ -89,7 +109,9 @@ h2 {
 /* ================= TABLE ================= */
 .ranking-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* ⬅️ ini kuncinya */
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .ranking-table {
@@ -100,6 +122,11 @@ h2 {
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Admin Table warna header beda sedikit */
+.admin-table thead th {
+    background: #b5d4e9 !important;
 }
 
 /* HEADER */
@@ -126,7 +153,7 @@ h2 {
     transform: scale(1.002);
 }
 
-/* ================= TIER COLORS (FULL BARIS) ================= */
+/* ================= TIER COLORS ================= */
 
 /* 🔴 S+ */
 .tier-splus {
@@ -195,6 +222,26 @@ h2 {
     font-size: 14px;
 }
 
+/* ===== TITLE + SEARCH (1 BARIS) ===== */
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    padding: 0 10px;
+}
+
+.title-row h2 {
+    margin: 0;
+}
+
+/* Supaya search tidak terlalu melebar */
+.title-row .search-wrapper input {
+    width: 220px;
+}
+
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 600px) {
 
@@ -233,4 +280,15 @@ h2 {
         font-size: 14px;
         padding: 10px;
     }
+    .title-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .title-row .search-wrapper input {
+        width: 100%;
+        max-width: 300px;
+    }
+
 }
+    
