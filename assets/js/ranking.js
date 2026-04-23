@@ -1,6 +1,4 @@
-// ================= DATA =================
-
-// MEMBER ONLY
+// ================= MEMBER =================
 let members = [
     { name: "Naiun", point: 5910 },
     { name: "Gian", point: 4050 },
@@ -78,13 +76,47 @@ let members = [
     { name: "Ebel", point: 50 },
     { name: "Elclio", point: 50 },
     { name: "Mira", point: 50 },
+    { name: "Ajeng", point: 50 },
+    { name: "Fisa", point: 50 },
+    { name: "Inan", point: 50 },
+    { name: "Ath", point: 50 },
+    { name: "Mon", point: 50 },
 
     { name: "Faras", point: 40 },
     { name: "Zacky", point: 40 },
-    { name: "Zen", point: 40 }
+    { name: "Nevvoir", point: 40 },
+    { name: "Syasya", point: 40 },
+    { name: "Zen", point: 40 },
+    { name: "Anya", point: 40 },
+    { name: "Sya", point: 40 },
+    { name: "Nihan", point: 40 },
+    { name: "Dev", point: 40 },
+    { name: "Pai", point: 40 },
+    { name: "Arfa", point: 40 },
+    { name: "Ica", point: 40 },
+    { name: "Selyn", point: 40 },
+    { name: "Kiara", point: 40 },
+    { name: "Yumna", point: 40 },
+    { name: "Nda", point: 40 },
+    { name: "Anindya", point: 40 },
+    { name: "Luis", point: 40 },
+    { name: "Latasya", point: 40 },
+    { name: "Airyn", point: 40 },
+    { name: "Ara", point: 40 },
+    { name: "Feby", point: 40 },
+    { name: "Yevgeny", point: 40 },
+    { name: "Esta", point: 40 },
+    { name: "Naya", point: 40 },
+    { name: "Pia", point: 40 },
+    { name: "Sauno", point: 40 },
+    { name: "Sza", point: 40 },
+    { name: "Alyn", point: 40 },
+    { name: "Erer", point: 40 },
+    { name: "Chan", point: 40 },
+    { name: "Ayrin", point: 40 }
 ];
 
-// ADMIN ONLY
+// ================= ADMIN =================
 let admins = [
     { name: "Rena", point: 8410 },
     { name: "Kenzo", point: 5970 },
