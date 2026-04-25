@@ -1,0 +1,233 @@
+/* ================= BODY ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #73B4E6, #99D5FF);
+    background-attachment: fixed;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+}
+
+.title {
+    font-size: 28px;
+    color: white;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #eaf6ff;
+    margin-bottom: 15px;
+}
+
+/* ================= MONTH MENU ================= */
+.month-menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+
+.month-menu::-webkit-scrollbar {
+    display: none;
+}
+
+/* 🔥 FIX UTAMA: RESET BUTTON */
+.month-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: none;
+    outline: none;
+
+    flex: 0 0 auto;
+    padding: 6px 14px;
+
+    border-radius: 12px; /* samain sama back-btn */
+    background: rgba(255,255,255,0.6);
+    color: #003666;
+
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.month-btn:hover {
+    transform: scale(1.05);
+}
+
+.month-btn.active {
+    background: #4c8fcb;
+    color: white;
+}
+
+/* ================= FILTER MENU ================= */
+.filter-menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+
+.filter-menu::-webkit-scrollbar {
+    display: none;
+}
+
+/* 🔥 FIX BUTTON JUGA */
+.filter-menu button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: none;
+    outline: none;
+
+    flex: 0 0 auto;
+    padding: 6px 14px;
+
+    border-radius: 12px;
+    background: rgba(255,255,255,0.4);
+    color: #003666;
+
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.filter-menu button:hover {
+    transform: scale(1.05);
+}
+
+.filter-menu button.active {
+    background: #4c8fcb;
+    color: white;
+}
+
+/* ================= GALLERY GRID ================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card h3 {
+    font-size: 13px;
+    margin: 6px 0 2px;
+}
+
+.card p {
+    font-size: 11px;
+    color: #777;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .month-btn,
+    .filter-menu button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .card img {
+        height: 100px;
+    }
+
+    .lightbox img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}
