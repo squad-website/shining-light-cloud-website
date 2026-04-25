@@ -41,33 +41,24 @@ body {
     display: none;
 }
 
-.month-btn {
-    padding: 6px 14px;
-    border: none;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.4);
-    cursor: pointer;
-    font-weight: 600;
-    white-space: nowrap;
-    font-size: 13px;
-}
-
-.month-btn.active {
-    background: #4c8fcb;
-    color: white;
-}
-
-/* ================= FILTER MENU ================= */
+/* ================= FILTER MENU (SCROLL) ================= */
 .filter-menu {
     display: flex;
     gap: 10px;
     margin-bottom: 25px;
 
-    flex-wrap: wrap;              /* 🔥 FIX UTAMA */
-    justify-content: center;      /* biar rapi tengah */
+    overflow-x: auto;        /* 🔥 scroll horizontal */
+    white-space: nowrap;     /* 🔥 biar ga turun */
+    padding-bottom: 5px;
+}
+
+/* hide scrollbar */
+.filter-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .filter-menu button {
+    flex: 0 0 auto;          /* 🔥 penting biar ga nge-stretch */
     padding: 6px 14px;
     border: none;
     border-radius: 20px;
@@ -176,12 +167,7 @@ body {
         font-size: 13px;
     }
 
-    /* 🔥 FILTER LEBIH RAPI DI HP */
-    .filter-menu {
-        gap: 8px;
-        justify-content: center;
-    }
-
+    /* tombol lebih kecil di HP */
     .filter-menu button {
         font-size: 12px;
         padding: 5px 10px;
