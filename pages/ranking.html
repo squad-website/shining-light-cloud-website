@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking | SLC</title>
+    <link rel="stylesheet" href="../assets/css/ranking.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Ranking SLC</div>
+    <a href="../index.html" class="back-btn">Kembali</a>
+</nav>
+
+<section class="ranking">
+
+    <!-- TITLE + SEARCH -->
+    <div class="title-row">
+        <h2>Leaderboard Member</h2>
+
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Cari nama member...">
+        </div>
+    </div>
+
+    <!-- 🔥 MEMBER CARD -->
+    <div class="ranking-container">
+        <h3 class="sub-title">Daftar Member</h3>
+        <div id="rankingContainer" class="rank-container">
+            <!-- AUTO JS -->
+        </div>
+    </div>
+
+    <!-- 🔥 ADMIN CARD -->
+    <div class="ranking-container admin-container">
+        <h3 class="sub-title">Daftar Admin</h3>
+        <div id="adminContainer" class="admin-card-list">
+            <!-- AUTO JS -->
+        </div>
+    </div>
+
+    <!-- TIER REQUIREMENT (tetap sama) -->
+    <div class="tier-info">
+        <h3>✨ Tier Requirement</h3><br>
+
+        <ul class="tier-list">
+            <li><strong>S+ Tier</strong> — ≥ 3.50mp  
+                <span>Sangat aktif, kontribusi tinggi, selalu terlihat</span>
+            </li>
+
+            <li><strong>S Tier</strong> — 2.00mp – 3.49mp  
+                <span>Aktif di kegiatan utama & konsisten</span>
+            </li>
+
+            <li><strong>A+ Tier</strong> — 1.20mp – 1.99mp  
+                <span>Cukup aktif & mulai menonjol</span>
+            </li>
+
+            <li><strong>A Tier</strong> — 700p – 1.19mp  
+                <span>Lumayan aktif, kontribusi belum stabil</span>
+            </li>
+
+            <li><strong>B+ Tier</strong> — 400p – 699p  
+                <span>Aktivitas sedang</span>
+            </li>
+
+            <li><strong>B Tier</strong> — 200p – 399p  
+                <span>Kurang aktif</span>
+            </li>
+
+            <li><strong>C Tier</strong> — 50p – 199p  
+                <span>Minim kontribusi</span>
+            </li>
+
+            <li><strong>D Tier</strong> — &lt; 50p  
+                <span>Hampir tidak aktif</span>
+            </li>
+        </ul>
+
+        <p class="tier-note">
+            💡 Tier akan naik/turun berdasarkan aktivitas dan total poin.
+            Semakin aktif, semakin cepat naik tier.
+        </p>
+    </div>
+
+</section>
+
+<!-- 🔥 MODULE -->
+<script type="module" src="../assets/js/ranking.js"></script>
+
+</body>
+</html>
