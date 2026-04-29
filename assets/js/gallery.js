@@ -79,6 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             {
+                img: "../assets/img/april/26.png",
+                title: "Hari 26",
+                desc: "Waktunya Libur",
+                category: "libur",
+            },
+
+            {
                 img: "../assets/img/april/27.png",
                 title: "Hari 27",
                 desc: "Patroli dan Foto Bersama",
