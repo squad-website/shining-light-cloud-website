@@ -1,0 +1,130 @@
+/* HEADER */
+.rules-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.rules-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.rules-header p {
+    opacity: 0.75;
+    font-size: 15px;
+}
+
+/* CONTENT WRAPPER */
+.rules-content {
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* GROUP TITLE */
+.rules-group {
+    margin-bottom: 45px;
+}
+
+.rules-group h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    padding-left: 12px;
+    border-left: 4px solid #7BC6F2; /* warna biru khas SLC */
+    color: #fff;
+    font-weight: 700;
+}
+
+/* RULE ITEM */
+.rule-item {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    transition: 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+.rule-item h3 {
+    margin-bottom: 6px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.rule-item p {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.45;
+}
+
+/* HOVER EFFECT */
+.rule-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+.rules-footer {
+    text-align: center;
+    padding: 45px 20px 80px;
+    opacity: 0.75;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+    .rules-header {
+        padding: 25px 10px;
+    }
+
+    .rules-header h1 {
+        font-size: 24px;
+    }
+
+    .rules-header p {
+        font-size: 13px;
+    }
+
+    .rules-content {
+        padding: 10px;
+    }
+
+    .rule-item {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .rule-item h3 {
+        font-size: 14px;
+    }
+
+    .rule-item p {
+        font-size: 12px;
+    }
+
+    .rules-group h2 {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+}

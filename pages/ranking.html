@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking | SLC</title>
+
+    <link rel="stylesheet" href="../assets/css/ranking.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Leaderboard SLC</div>
+    <a href="../index.html" class="back-btn">Kembali</a>
+</nav>
+
+<section class="ranking">
+
+    <!-- TITLE + SEARCH -->
+    <div class="title-row">
+        <h2>Leaderboard Member</h2>
+
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Cari nama member...">
+        </div>
+    </div>
+
+    <!-- MEMBER SECTION -->
+    <div class="ranking-container">
+        <h3 class="sub-title">Daftar Member</h3>
+        <div id="rankingContainer" class="rank-container">
+            <!-- AUTO JS -->
+        </div>
+    </div>
+
+    <!-- ADMIN SECTION -->
+    <div class="ranking-container admin-container">
+        <h3 class="sub-title">Daftar Admin</h3>
+        <div id="adminContainer" class="admin-card-list">
+            <!-- AUTO JS -->
+        </div>
+    </div>
+
+    <!-- TIER REQUIREMENT -->
+    <div class="tier-info">
+        <h3>✨ Tier Requirement</h3><br>
+
+        <ul class="tier-list">
+            <li><strong class="tier-badge s-plus">S+ Tier</strong> — ≥ 3.50mp  
+                <span>Sangat aktif, kontribusi tinggi, selalu terlihat</span>
+            </li>
+
+            <li><strong class="tier-badge s">S Tier</strong> — 2.00mp – 3.49mp  
+                <span>Aktif di kegiatan utama & konsisten</span>
+            </li>
+
+            <li><strong class="tier-badge a-plus">A+ Tier</strong> — 1.20mp – 1.99mp  
+                <span>Cukup aktif & mulai menonjol</span>
+            </li>
+
+            <li><strong class="tier-badge a">A Tier</strong> — 700p – 1.19mp  
+                <span>Lumayan aktif, kontribusi belum stabil</span>
+            </li>
+
+            <li><strong class="tier-badge b-plus">B+ Tier</strong> — 400p – 699p  
+                <span>Aktivitas sedang</span>
+            </li>
+
+            <li><strong class="tier-badge b">B Tier</strong> — 200p – 399p  
+                <span>Kurang aktif</span>
+            </li>
+
+            <li><strong class="tier-badge c">C Tier</strong> — 50p – 199p  
+                <span>Minim kontribusi</span>
+            </li>
+
+            <li><strong class="tier-badge d">D Tier</strong> — &lt; 50p  
+                <span>Hampir tidak aktif</span>
+            </li>
+        </ul>
+
+        <p class="tier-note">
+            💡 Tier akan naik/turun berdasarkan aktivitas dan total poin.
+        </p>
+    </div>
+
+    <!-- POINT SYSTEM SECTION -->
+    <div class="point-system">
+        <h3>📌 Point System SLC</h3>
+
+        <div class="point-table">
+            
+            <div class="point-item">
+                <h4>Opmem Siang</h4>
+                <p>+120 poin (full)</p>
+                <p>+60 poin (½)</p>
+            </div>
+
+            <div class="point-item">
+                <h4>Opmem Malam</h4>
+                <p>+90 poin (full)</p>
+                <p>+45 poin (½)</p>
+            </div>
+
+            <div class="point-item">
+                <h4>Opmem Keliling</h4>
+                <p>+100 poin (full)</p>
+                <p>+50 poin (½)</p>
+            </div>
+
+            <div class="point-item">
+                <h4>Dapat Member</h4>
+                <p>+75 poin (full)</p>
+                <p>+35 poin (½)</p>
+            </div>
+
+            <div class="point-item">
+                <h4>Training</h4>
+                <p>+75 poin (full)</p>
+                <p>+35 poin (½)</p>
+            </div>
+
+            <div class="point-item">
+                <h4>Patroli</h4>
+                <p>+150 poin (full)</p>
+                <p>+75 poin (½)</p>
+            </div>
+
+            <div class="point-item">
+                <h4>Collab</h4>
+                <p>+300 poin (full)</p>
+                <p>+150 poin (½)</p>
+            </div>
+
+        </div>
+
+        <div class="point-note">
+            <p>• Kegiatan di luar jam operasional tidak dihitung.</p>
+            <p>• Poin hanya dihitung jika mengikuti kegiatan penuh / setengah.</p>
+            <p>• Manipulasi poin = tidak dihitung.</p>
+            <p>• Staff berhak menolak atau menghapus poin yang tidak valid.</p>
+        </div>
+    </div>
+
+</section>
+
+<script type="module" src="../assets/js/ranking.js"></script>
+
+</body>
+</html>
